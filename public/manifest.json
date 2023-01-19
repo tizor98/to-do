@@ -1,0 +1,15 @@
+{
+   "short-name": "ToDo app",
+   "name": "Created by Alberto Ortiz",
+   "icons": [
+      {
+         "src": "logo.png",
+         "sizes": "1350x1100",
+         "type": "image/png"
+      }
+   ],
+   "start_url": ".",
+   "display": "standalone",
+   "theme_color": "#000000",
+   "background_color": "#ffffff"
+}

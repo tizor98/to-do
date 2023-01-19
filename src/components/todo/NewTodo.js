@@ -23,7 +23,7 @@ export default function NewTodo(props) {
    }
    
    return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="mt-5 border border-2 border-info rounded-5 p-5" style={{maxHeight:"524px"}}>
          
          <h2>Create new note</h2>
 

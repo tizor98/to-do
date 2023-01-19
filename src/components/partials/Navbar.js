@@ -1,3 +1,5 @@
+import logo from '../../assets/img/logo.png'
+
 export default function Navbar() {
    return (
       <header>
@@ -15,18 +17,13 @@ export default function Navbar() {
                   <i className="fas fa-bars"></i>
                </button>
                <div className="collapse navbar-collapse" id="navbarExample01">
+               <img src={logo} alt="logo" height={30} />
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                      <li className="nav-item active">
                         <a className="nav-link text-white" aria-current="page" href="/">Home</a>
                      </li>
                      <li className="nav-item">
-                        <a className="nav-link text-white" href="/">Features</a>
-                     </li>
-                     <li className="nav-item">
-                        <a className="nav-link text-white" href="/">Pricing</a>
-                     </li>
-                     <li className="nav-item">
-                        <a className="nav-link text-white" href="/">About</a>
+                        <a className="nav-link text-white" href="https://github.com/tizor98" rel="noreferrer" target="_blank">About Alberto Ortiz</a>
                      </li>
                   </ul>
                </div>
