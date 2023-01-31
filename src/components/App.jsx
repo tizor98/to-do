@@ -16,7 +16,7 @@ export default function App() {
 
       <Navbar />
 
-      <div className="container text-center d-md-flex justify-content-around w-100 gap-4" >
+      <div className="container text-center d-lg-flex justify-content-around w-100 gap-4" >
          <NewTodo addItem={addItem} />
          <TaskList list={list} setList={setList} />
       </div>
