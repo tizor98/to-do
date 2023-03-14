@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction, useState } from "react"
 import Swal from 'sweetalert2'
 import { Item } from "../types/Item"
+import { storage } from "../types/LocalStorage"
 
 type PropsInfo = {
    item: Item,
@@ -18,7 +19,7 @@ export default function Todo({ item, list, setList }: PropsInfo) {
 
    const updateDone = function (): void {
       const todoToUpdate = list.filter(todo => todo.id === item.id)
-      todoToUpdate[0].done = item.done ? false : true
+      todoToUpdate[0].done = !item.done
       if (item.done) {
          setCompleted(classSuccess)
          setButtonClass(classNotSuccess)
@@ -29,7 +30,9 @@ export default function Todo({ item, list, setList }: PropsInfo) {
    }
 
    const deleteTodo = function (): void {
-      setList(list.filter(todo => todo.id !== item.id))
+      const newList: Array<Item> = list.filter(todo => todo.id !== item.id)
+      storage.setItem('list', newList.length > 0 ? newList : null)
+      setList(newList)
    }
 
    const deleteAlert = () => {
